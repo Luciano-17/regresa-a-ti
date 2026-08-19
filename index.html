@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      No hay <title>/<meta name="description"> estáticos a propósito: los pone
+      react-helmet-async, distinto en cada página (ver src/components/Seo.tsx,
+      usado en cada src/pages/*.tsx). Agregar acá un <title> o meta description
+      estático haría que queden duplicados en el <head> en vez de ser
+      reemplazados, porque Helmet no sabe que tiene que sacar tags que no
+      renderizó él mismo.
+    -->
+
+    <!--
+      Google tag (gtag.js) — PENDIENTE del ID real del cliente.
+
+      Cuando el cliente entregue su ID de Google Ads o GA4 (formato "AW-XXXXXXXXX"
+      para Google Ads, o "G-XXXXXXXXXX" para GA4), descomentar el siguiente bloque
+      y reemplazar GT-XXXXXXX por ese ID en LOS DOS lugares donde aparece (la URL
+      del script y el argumento de gtag('config', ...)). Si el cliente entrega más
+      de un ID (por ejemplo GA4 + Google Ads), se puede llamar a gtag('config', ...)
+      una vez por cada ID, reutilizando el mismo script de gtag.js.
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GT-XXXXXXX"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'GT-XXXXXXX');
+      </script>
+
+      Evento de conversión en los botones de WhatsApp:
+      Ya está todo preparado en el código para disparar la conversión apenas este
+      script esté activo — no hace falta tocar los componentes. Ver
+      src/lib/gtag.ts: ahí se llama a window.gtag('event', 'conversion', { send_to })
+      en el onClick de los botones de WhatsApp (src/components/Button.tsx variante
+      "whatsapp" y src/components/WhatsAppFloat.tsx), ANTES de que el navegador siga
+      el link (el link abre en pestaña nueva, así que no hace falta prevenir la
+      navegación). Solo falta reemplazar WHATSAPP_CONVERSION_LABEL en
+      src/lib/gtag.ts por la etiqueta real de conversión (Google Ads → Conversiones
+      → tu acción de conversión → "Fragmento de evento", formato
+      "AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX").
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

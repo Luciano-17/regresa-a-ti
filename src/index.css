@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: theme('fontFamily.sans');
+  color: theme('colors.plum');
+  background-color: theme('colors.cream');
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: theme('fontFamily.serif');
+}
