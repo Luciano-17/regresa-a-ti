@@ -76,7 +76,7 @@ export default function Navbar() {
             width={1072}
             height={504}
             loading="eager"
-            className="h-10 w-auto md:h-16"
+            className="h-12 w-auto md:h-16"
           />
         </Link>
 

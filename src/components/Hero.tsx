@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -50,6 +50,13 @@ export default function Hero() {
   const goTo = (next: number) => setIndex((next + slides.length) % slides.length)
   const slide = slides[index]
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [index])
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-plum">
       <AnimatePresence>
@@ -75,10 +82,10 @@ export default function Hero() {
       </AnimatePresence>
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-16 text-center md:px-24">
-        <h1 className="max-w-3xl font-serif text-5xl font-bold text-cream md:text-7xl">
+        <h1 className="max-w-3xl font-serif text-4xl font-bold text-cream md:text-7xl">
           {slide.title}
         </h1>
-        <p className="mt-6 max-w-xl font-sans text-xl text-cream md:text-2xl">{slide.text}</p>
+        <p className="mt-6 max-w-xl font-sans text-lg text-cream md:text-2xl">{slide.text}</p>
         <Button
           variant="whatsapp"
           size="lg"

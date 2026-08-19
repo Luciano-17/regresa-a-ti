@@ -27,10 +27,10 @@ export default function TestimonialsSection() {
   return (
     <Section background="cream">
       <div className="text-center">
-        <h2 className="font-serif text-4xl text-plum md:text-5xl">
+        <h2 className="font-serif text-3xl text-plum md:text-5xl">
           Lo que puede cambiar cuando volvés a vos
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl font-sans text-lg text-plum/80 md:text-xl">
+        <p className="mx-auto mt-4 max-w-2xl font-sans text-base text-plum/80 md:text-xl">
           Cada proceso es diferente. Estas son algunas de las experiencias que otras personas
           decidieron compartir.
         </p>

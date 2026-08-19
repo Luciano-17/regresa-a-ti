@@ -64,7 +64,7 @@ export default function FAQ() {
       />
       <Section background="cream">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-center font-serif text-5xl text-plum md:text-6xl">
+          <h1 className="text-center font-serif text-4xl text-plum md:text-6xl">
             Preguntas frecuentes
           </h1>
           <div className="mt-12">

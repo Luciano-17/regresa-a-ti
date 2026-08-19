@@ -5,6 +5,7 @@ import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { WHATSAPP_URL, INSTAGRAM_URL, EMAIL } from '../lib/constants'
 import logo from '../assets/logo/logo-lockup.png'
+import onaiLogo from '../assets/onai-logo.svg'
 
 const legalLinks = [
   { label: 'Preguntas frecuentes', to: '/faq' },
@@ -17,21 +18,21 @@ export default function Footer() {
   return (
     <footer id="contacto" className="bg-plum text-cream">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 md:flex-row md:justify-between md:px-10">
-        <div className="flex flex-col gap-3 md:max-w-xs">
+        <div className="flex flex-col items-center gap-3 md:items-start md:max-w-xs">
           <img
             src={logo}
             alt="Regresa a Ti"
             width={1072}
             height={504}
             loading="lazy"
-            className="h-14 w-auto self-start brightness-0 invert md:h-16"
+            className="h-14 w-auto brightness-0 invert md:h-16"
           />
-          <p className="font-sans text-base text-cream/80">
+          <p className="text-center font-sans text-base text-cream/80 md:text-left">
             Porque también merecés ser parte de la vida que estás construyendo.
           </p>
         </div>
 
-        <div className="flex flex-col items-start gap-3 self-center font-sans text-base md:self-auto">
+        <div className="flex flex-col items-center gap-3 self-center font-sans text-base md:items-start md:self-auto">
           <a
             href={WHATSAPP_URL()}
             target="_blank"
@@ -60,7 +61,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex flex-col items-start gap-3 font-sans text-base md:items-end">
+        <div className="flex flex-col items-center gap-3 font-sans text-base md:items-end">
           {legalLinks.map((link) => (
             <Link key={link.to} to={link.to} className="hover:underline">
               {link.label}
@@ -75,7 +76,7 @@ export default function Footer() {
         <p className="inline-flex items-center">
           Desarrollado por
           <a href="https://onai.com.ar/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:opacity-80 transition-opacity">
-            <img src="src/assets/onai-logo.svg" alt="Onai" className="w-16" />
+            <img src={onaiLogo} alt="Onai" className="w-16" />
           </a>
         </p>
       </div>

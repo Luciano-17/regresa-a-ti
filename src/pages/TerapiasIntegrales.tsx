@@ -88,11 +88,11 @@ export default function TerapiasIntegrales() {
 
       <Section background="cream">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-lg font-semibold uppercase tracking-widest text-purple">
+          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple md:text-lg">
             Cada proceso necesita sus propias herramientas.
           </span>
-          <h1 className="font-serif text-5xl text-plum md:text-6xl">Terapias integrales</h1>
-          <p className="font-sans text-2xl leading-relaxed text-plum/80">
+          <h1 className="font-serif text-4xl text-plum md:text-6xl">Terapias integrales</h1>
+          <p className="font-sans text-lg leading-relaxed text-plum/80 md:text-2xl">
             Tu historia, tus desafíos y tu manera de vivir son únicos. Por eso, en las
             sesiones de Terapia Integral no trabajamos con una única técnica ni seguimos un
             método rígido. Integramos distintas herramientas —biodescodificación, coaching de
@@ -106,18 +106,18 @@ export default function TerapiasIntegrales() {
       </Section>
 
       <Section background="white">
-        <h2 className="text-center font-serif text-4xl uppercase tracking-wide text-plum md:text-5xl">
+        <h2 className="text-center font-serif text-3xl uppercase tracking-wide text-plum md:text-5xl">
           Cuatro miradas, un solo proceso
         </h2>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {miradas.map((mirada) => (
             <div key={mirada.technique} className="rounded-2xl bg-cream p-8">
-              <span className="font-sans text-lg font-semibold uppercase tracking-widest text-purple">
+              <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple md:text-lg">
                 {mirada.number} · {mirada.category}
               </span>
               <h3 className="mt-2 font-serif text-2xl text-plum">{mirada.technique}</h3>
-              <p className="mt-3 font-sans text-lg text-plum/70">{mirada.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{mirada.text}</p>
             </div>
           ))}
         </div>
@@ -130,7 +130,7 @@ export default function TerapiasIntegrales() {
       </Section>
 
       <Section background="white">
-        <h2 className="text-center font-serif text-4xl uppercase tracking-wide text-plum md:text-5xl">
+        <h2 className="text-center font-serif text-3xl uppercase tracking-wide text-plum md:text-5xl">
           ¿Qué te llevás de este proceso?
         </h2>
 
@@ -138,7 +138,7 @@ export default function TerapiasIntegrales() {
           {resultados.map((resultado) => (
             <div key={resultado.title}>
               <h3 className="font-serif text-2xl text-plum">{resultado.title}</h3>
-              <p className="mt-3 font-sans text-lg text-plum/70">{resultado.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{resultado.text}</p>
             </div>
           ))}
         </div>
@@ -146,7 +146,7 @@ export default function TerapiasIntegrales() {
 
       <Section background="cream">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
-          <p className="font-serif text-3xl text-plum md:text-4xl">
+          <p className="font-serif text-2xl text-plum md:text-4xl">
             ¿Cuánto podría cambiar tu vida si empezaras a comprender lo que te pasa, en lugar
             de simplemente intentar sobrellevarlo?
           </p>

@@ -11,8 +11,8 @@ export default function AboutPreview() {
     <Section background="cream">
       <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
         <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
-          <h2 className="font-serif text-4xl text-plum md:text-5xl">Guadalupe Zulatto</h2>
-          <p className="font-sans text-lg text-plum/80 md:text-xl">
+          <h2 className="font-serif text-3xl text-plum md:text-5xl">Guadalupe Zulatto</h2>
+          <p className="font-sans text-base text-plum/80 md:text-xl">
             Soy terapeuta holística, mamá e instructora de movimiento. Siempre sentí que
             escuchar profundamente a los demás era una de mis formas más genuinas de estar
             presente. Con los años, esa sensibilidad se convirtió en una manera de acompañar:

@@ -58,11 +58,11 @@ export default function MovimientoConsciente() {
 
       <Section background="cream">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-lg font-semibold uppercase tracking-widest text-purple">
+          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple md:text-lg">
             Cuando no encontrás las palabras, dejá que el cuerpo hable.
           </span>
-          <h1 className="font-serif text-5xl text-plum md:text-6xl">Movimiento consciente</h1>
-          <p className="font-sans text-2xl leading-relaxed text-plum/80">
+          <h1 className="font-serif text-4xl text-plum md:text-6xl">Movimiento consciente</h1>
+          <p className="font-sans text-lg leading-relaxed text-plum/80 md:text-2xl">
             A veces sabemos que algo nos pasa, pero no encontramos las palabras para
             explicarlo. El cuerpo, en cambio, siempre está hablando. A través del movimiento
             consciente te invito a escucharlo, explorar lo que necesita expresar y darle un
@@ -74,7 +74,7 @@ export default function MovimientoConsciente() {
       </Section>
 
       <Section background="white">
-        <h2 className="text-center font-serif text-4xl uppercase tracking-wide text-plum md:text-5xl">
+        <h2 className="text-center font-serif text-3xl uppercase tracking-wide text-plum md:text-5xl">
           Un espacio para...
         </h2>
 
@@ -82,14 +82,14 @@ export default function MovimientoConsciente() {
           {espacio.map((item) => (
             <div key={item.title} className="rounded-2xl bg-cream p-8">
               <h3 className="font-serif text-2xl text-plum">{item.title}</h3>
-              <p className="mt-3 font-sans text-lg text-plum/70">{item.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{item.text}</p>
             </div>
           ))}
         </div>
       </Section>
 
       <Section background="white">
-        <h2 className="text-center font-serif text-4xl uppercase tracking-wide text-plum md:text-5xl">
+        <h2 className="text-center font-serif text-3xl uppercase tracking-wide text-plum md:text-5xl">
           ¿Y si esta fuera tu forma de volver a vos?
         </h2>
 
@@ -97,7 +97,7 @@ export default function MovimientoConsciente() {
           {volverAVos.map((item) => (
             <div key={item.title}>
               <h3 className="font-serif text-2xl text-plum">{item.title}</h3>
-              <p className="mt-3 font-sans text-lg text-plum/70">{item.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{item.text}</p>
             </div>
           ))}
         </div>
@@ -105,7 +105,7 @@ export default function MovimientoConsciente() {
 
       <Section background="cream">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
-          <p className="font-serif text-3xl text-plum md:text-4xl">
+          <p className="font-serif text-2xl text-plum md:text-4xl">
             ¿Y si eso que estás intentando entender necesita, primero, ser sentido?
           </p>
           <Button variant="whatsapp" size="xl" whatsappMessage="Hola! Quiero experimentarlo.">

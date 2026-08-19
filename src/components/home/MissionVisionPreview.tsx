@@ -41,8 +41,8 @@ export default function MissionVisionPreview() {
             <span className="font-sans text-base font-semibold uppercase tracking-widest text-mauveLight">
               {column.eyebrow}
             </span>
-            <h3 className="font-serif text-3xl text-cream md:text-4xl">{column.title}</h3>
-            <p className="font-sans text-lg text-cream/80">{column.text}</p>
+            <h3 className="font-serif text-2xl text-cream md:text-4xl">{column.title}</h3>
+            <p className="font-sans text-base text-cream/80 md:text-lg">{column.text}</p>
           </div>
         ))}
       </div>

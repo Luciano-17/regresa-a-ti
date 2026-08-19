@@ -31,7 +31,7 @@ export default function MisionVision() {
           <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple">
             misión y visión
           </span>
-          <h1 className="font-serif text-5xl uppercase tracking-wide text-plum md:text-6xl">
+          <h1 className="font-serif text-4xl uppercase tracking-wide text-plum md:text-6xl">
             Un espacio que nació de una convicción
           </h1>
         </div>
@@ -39,14 +39,14 @@ export default function MisionVision() {
 
       <Section background="white">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-          <div>
+          <div className="text-center md:text-left">
             <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple">
               Misión
             </span>
-            <h2 className="mt-2 font-serif text-3xl text-plum md:text-4xl">
+            <h2 className="mt-2 font-serif text-2xl text-plum md:text-4xl">
               Acompañarte a volver a vos.
             </h2>
-            <div className="mt-5 space-y-4 font-sans text-lg leading-relaxed text-plum/80">
+            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80 md:text-lg">
               <p>
                 Regresa a Ti nació de una convicción simple: muchas veces, entre sostener,
                 resolver y seguir adelante, nos vamos alejando de nosotros mismos sin darnos
@@ -68,14 +68,14 @@ export default function MisionVision() {
             </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple">
               Visión
             </span>
-            <h2 className="mt-2 font-serif text-3xl text-plum md:text-4xl">
+            <h2 className="mt-2 font-serif text-2xl text-plum md:text-4xl">
               Aprender a vivir desde tu propio centro.
             </h2>
-            <div className="mt-5 space-y-4 font-sans text-lg leading-relaxed text-plum/80">
+            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80 md:text-lg">
               <p>
                 No imagino la evolución personal como llegar a un lugar sin problemas, dudas o
                 desafíos. La vida va a seguir cambiando, y nosotros también.

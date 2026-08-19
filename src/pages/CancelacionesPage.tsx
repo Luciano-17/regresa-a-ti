@@ -19,7 +19,7 @@ export default function CancelacionesPage() {
       </p>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Plazo para cancelar o reprogramar</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Plazo para cancelar o reprogramar</h2>
         <p className="mt-3">
           Podés cancelar o reprogramar tu sesión sin cargo escribiéndonos por WhatsApp con al
           menos 24 horas de anticipación al horario agendado.
@@ -27,7 +27,7 @@ export default function CancelacionesPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Cancelaciones fuera de plazo</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Cancelaciones fuera de plazo</h2>
         <p className="mt-3">
           Las cancelaciones o inasistencias que se comuniquen con menos de 24 horas de
           anticipación, o la falta de asistencia sin previo aviso, podrán considerarse como
@@ -36,7 +36,7 @@ export default function CancelacionesPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Situaciones excepcionales</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Situaciones excepcionales</h2>
         <p className="mt-3">
           Entendemos que pueden surgir imprevistos. Ante una emergencia o situación
           excepcional, escribinos y evaluamos juntas/os cómo reorganizar tu sesión.
@@ -44,7 +44,7 @@ export default function CancelacionesPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Cómo cancelar o reprogramar</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Cómo cancelar o reprogramar</h2>
         <p className="mt-3">
           Escribinos por{' '}
           <a

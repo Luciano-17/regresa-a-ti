@@ -16,7 +16,7 @@ export default function TerminosPage() {
       </p>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Naturaleza de los servicios</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Naturaleza de los servicios</h2>
         <p className="mt-3">
           Regresa a Ti ofrece sesiones online individuales de Terapia Integral y Movimiento
           Consciente, orientadas al autoconocimiento y al acompañamiento personal.
@@ -31,7 +31,7 @@ export default function TerminosPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Uso del sitio</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Uso del sitio</h2>
         <p className="mt-3">
           El contenido de este sitio es de carácter informativo y tiene como fin dar a
           conocer los servicios de Regresa a Ti. No está permitido reproducir, copiar o
@@ -40,7 +40,7 @@ export default function TerminosPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Coordinación y pago de sesiones</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Coordinación y pago de sesiones</h2>
         <p className="mt-3">
           Las sesiones se coordinan directamente por WhatsApp y se abonan según las
           modalidades de pago informadas al momento de agendar. Las condiciones de
@@ -49,7 +49,7 @@ export default function TerminosPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Responsabilidad</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Responsabilidad</h2>
         <p className="mt-3">
           El proceso y sus resultados dependen del compromiso activo de cada persona. Regresa
           a Ti se compromete a brindar un espacio de acompañamiento profesional, pero no
@@ -58,7 +58,7 @@ export default function TerminosPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Modificaciones</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Modificaciones</h2>
         <p className="mt-3">
           Estos términos pueden actualizarse en cualquier momento. Te recomendamos revisarlos
           periódicamente.
@@ -66,7 +66,7 @@ export default function TerminosPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Contacto</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Contacto</h2>
         <p className="mt-3">
           Ante cualquier consulta sobre estos términos, podés escribirnos a{' '}
           <a href={`mailto:${EMAIL}`} className="text-purple underline">

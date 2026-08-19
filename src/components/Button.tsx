@@ -9,13 +9,13 @@ type Variant = 'primary' | 'whatsapp'
 type Size = 'md' | 'lg' | 'xl'
 
 const sizeClasses: Record<Size, string> = {
-  md: 'px-6 py-2 text-lg',
-  lg: 'px-10 py-4 text-xl',
-  xl: 'px-12 py-5 text-2xl',
+  md: 'px-4 py-1.5 text-sm md:px-6 md:py-2 md:text-lg',
+  lg: 'px-5 py-2 text-sm md:px-10 md:py-4 md:text-xl',
+  xl: 'px-6 py-2.5 text-base md:px-12 md:py-5 md:text-2xl',
 }
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-full font-sans font-medium transition-colors duration-200'
+  'inline-flex items-center justify-center gap-2 rounded-full text-center font-sans font-medium transition-colors duration-200'
 
 type CommonProps = {
   variant?: Variant
@@ -74,7 +74,7 @@ export default function Button(props: ButtonProps) {
         }}
         {...anchorProps}
       >
-        <FontAwesomeIcon icon={faWhatsapp} className="h-5 w-5" />
+        <FontAwesomeIcon icon={faWhatsapp} className="h-3.5 w-3.5 shrink-0 md:h-5 md:w-5" />
         {children ?? 'Escribinos por WhatsApp'}
       </a>
     )

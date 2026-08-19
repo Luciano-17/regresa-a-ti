@@ -18,7 +18,7 @@ export default function PrivacidadPage() {
       </p>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Qué datos recolectamos</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Qué datos recolectamos</h2>
         <p className="mt-3">
           Recolectamos los datos que vos mismo/a nos proporcionás de forma voluntaria al
           escribirnos por WhatsApp o completar un formulario de contacto, como tu nombre,
@@ -33,7 +33,7 @@ export default function PrivacidadPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Para qué usamos tus datos</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Para qué usamos tus datos</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5">
           <li>Coordinar y confirmar tus sesiones.</li>
           <li>Responder tus consultas y comunicarnos con vos.</li>
@@ -43,7 +43,7 @@ export default function PrivacidadPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Con quién compartimos tus datos</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Con quién compartimos tus datos</h2>
         <p className="mt-3">
           No vendemos ni compartimos tus datos personales con terceros con fines comerciales.
           Solo compartimos la información estrictamente necesaria con proveedores de pago
@@ -55,7 +55,7 @@ export default function PrivacidadPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Tus derechos</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Tus derechos</h2>
         <p className="mt-3">
           Podés solicitarnos en cualquier momento acceder, rectificar o eliminar tus datos
           personales, así como solicitar que dejemos de utilizarlos, escribiéndonos a{' '}
@@ -67,7 +67,7 @@ export default function PrivacidadPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Cambios a esta política</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Cambios a esta política</h2>
         <p className="mt-3">
           Podemos actualizar esta política de privacidad ocasionalmente para reflejar cambios
           en nuestras prácticas. Te recomendamos revisarla periódicamente.
@@ -75,7 +75,7 @@ export default function PrivacidadPage() {
       </div>
 
       <div>
-        <h2 className="font-serif text-3xl text-plum md:text-4xl">Contacto</h2>
+        <h2 className="font-serif text-2xl text-plum md:text-4xl">Contacto</h2>
         <p className="mt-3">
           Si tenés dudas sobre esta política, podés escribirnos a{' '}
           <a href={`mailto:${EMAIL}`} className="text-purple underline">
