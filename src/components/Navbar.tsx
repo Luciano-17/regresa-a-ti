@@ -88,7 +88,12 @@ export default function Navbar() {
             </Link>
           </li>
 
-          <li ref={desktopServiciosRef} className="relative">
+          <li
+            ref={desktopServiciosRef}
+            className="relative"
+            onMouseEnter={() => setIsDesktopServiciosOpen(true)}
+            onMouseLeave={() => setIsDesktopServiciosOpen(false)}
+          >
             <button
               onClick={() => setIsDesktopServiciosOpen((prev) => !prev)}
               aria-expanded={isDesktopServiciosOpen}
@@ -109,13 +114,13 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full mt-3 w-56 rounded-xl bg-cream py-2 shadow-lg"
+                  className="absolute left-0 top-full mt-3 w-max min-w-[16rem] rounded-xl bg-cream py-2 shadow-lg"
                 >
                   <li>
                     <Link
                       to="/servicios/terapias-integrales"
                       onClick={closeAll}
-                      className="block px-4 py-2 font-sans text-lg text-plum hover:bg-mauveLight/30"
+                      className="block whitespace-nowrap px-4 py-2 font-sans text-lg text-plum hover:bg-mauveLight/30"
                     >
                       Terapias integrales
                     </Link>
@@ -124,7 +129,7 @@ export default function Navbar() {
                     <Link
                       to="/servicios/movimiento-consciente"
                       onClick={closeAll}
-                      className="block px-4 py-2 font-sans text-lg text-plum hover:bg-mauveLight/30"
+                      className="block whitespace-nowrap px-4 py-2 font-sans text-lg text-plum hover:bg-mauveLight/30"
                     >
                       Movimiento consciente
                     </Link>
@@ -221,7 +226,7 @@ export default function Navbar() {
                           <Link
                             to="/servicios/terapias-integrales"
                             onClick={closeAll}
-                            className="block py-2 text-lg text-mauve"
+                            className="block py-2 text-lg text-plum"
                           >
                             Terapias integrales
                           </Link>
@@ -230,7 +235,7 @@ export default function Navbar() {
                           <Link
                             to="/servicios/movimiento-consciente"
                             onClick={closeAll}
-                            className="block py-2 text-lg text-mauve"
+                            className="block py-2 text-lg text-plum"
                           >
                             Movimiento consciente
                           </Link>

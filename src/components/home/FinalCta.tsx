@@ -8,7 +8,7 @@ export default function FinalCta() {
         <h2 className="max-w-2xl font-serif text-3xl text-plum md:text-5xl">
           Quizás sea momento de hacerte un poquito de lugar.
         </h2>
-        <p className="max-w-xl font-sans text-base text-plum/80 md:text-xl">
+        <p className="max-w-xl font-sans text-base text-plum/80 md:text-lg">
           Para escuchar qué te pasa, descubrir qué necesitás y ver qué querés hacer con todo
           eso.
         </p>

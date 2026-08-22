@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza foto-2.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
@@ -15,25 +16,17 @@ export default function QuienSoy() {
         description="Conocé a Guadalupe Zulatto, terapeuta holística e instructora de movimiento detrás de Regresa a Ti."
       />
 
-      <div className="h-[75vh] w-full md:h-[85vh]">
-        <img
-          src={fotoGuadalupe}
-          alt="Guadalupe Zulatto"
-          width={50}
-          height={50}
-          loading="eager"
-          className="h-full w-full object-cover object-[50%_25%]"
-        />
-      </div>
+      <PageHero
+        image={fotoGuadalupe}
+        alt="Guadalupe Zulatto"
+        eyebrow="Te cuento de mí"
+        title="Hola, soy Guadalupe."
+        imageClassName="object-[50%_25%]"
+      />
 
       <Section background="cream">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple">
-            Te cuento de mí
-          </span>
-          <h1 className="font-serif text-4xl text-plum md:text-6xl">Hola, soy Guadalupe.</h1>
-
-          <div className="max-w-2xl space-y-6 text-center font-sans text-lg leading-relaxed text-plum/80 md:text-left md:text-xl">
+          <div className="max-w-2xl space-y-6 text-center font-sans text-base leading-relaxed text-plum/80 md:text-left md:text-lg">
             <p>
               Desde pequeña, escuchar a los demás siempre fue algo natural para mí. Aprendí a
               mirar más allá de las palabras: una pausa, una mirada, un gesto, aquello que a

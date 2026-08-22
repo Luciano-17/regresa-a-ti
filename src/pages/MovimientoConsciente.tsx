@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
@@ -45,24 +46,17 @@ export default function MovimientoConsciente() {
         description="Un espacio para escuchar y expresar a través del cuerpo lo que las palabras todavía no pueden nombrar."
       />
 
-      <div className="h-[75vh] w-full md:h-[85vh]">
-        <img
-          src={heroImage}
-          alt="Movimiento consciente"
-          width={50}
-          height={50}
-          loading="eager"
-          className="h-full w-full object-cover object-top"
-        />
-      </div>
+      <PageHero
+        image={heroImage}
+        alt="Movimiento consciente"
+        eyebrow="Cuando no encontrás las palabras, dejá que el cuerpo hable."
+        title="Movimiento consciente"
+        imageClassName="object-top"
+      />
 
       <Section background="cream">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple md:text-lg">
-            Cuando no encontrás las palabras, dejá que el cuerpo hable.
-          </span>
-          <h1 className="font-serif text-4xl text-plum md:text-6xl">Movimiento consciente</h1>
-          <p className="font-sans text-lg leading-relaxed text-plum/80 md:text-2xl">
+          <p className="font-sans text-base leading-relaxed text-plum/80 md:text-xl">
             A veces sabemos que algo nos pasa, pero no encontramos las palabras para
             explicarlo. El cuerpo, en cambio, siempre está hablando. A través del movimiento
             consciente te invito a escucharlo, explorar lo que necesita expresar y darle un
@@ -82,7 +76,7 @@ export default function MovimientoConsciente() {
           {espacio.map((item) => (
             <div key={item.title} className="rounded-2xl bg-cream p-8">
               <h3 className="font-serif text-2xl text-plum">{item.title}</h3>
-              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{item.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70">{item.text}</p>
             </div>
           ))}
         </div>
@@ -97,7 +91,7 @@ export default function MovimientoConsciente() {
           {volverAVos.map((item) => (
             <div key={item.title}>
               <h3 className="font-serif text-2xl text-plum">{item.title}</h3>
-              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{item.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70">{item.text}</p>
             </div>
           ))}
         </div>

@@ -47,9 +47,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink | ButtonAsWhatsApp
 
 export default function Button(props: ButtonProps) {
   const { variant = 'primary', size = 'md', className = '' } = props
-  const classes = `${baseClasses} ${sizeClasses[size]} ${
-    variant === 'whatsapp' ? 'bg-[#25D366] text-white hover:brightness-95' : 'bg-purple text-cream hover:bg-plum'
-  } ${className}`
+  const classes = `${baseClasses} ${sizeClasses[size]} bg-purple text-cream hover:bg-mauve ${className}`
 
   if (variant === 'whatsapp') {
     const {

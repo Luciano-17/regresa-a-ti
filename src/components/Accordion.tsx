@@ -44,7 +44,7 @@ export default function Accordion({ items, titleClassName }: AccordionProps) {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className="overflow-hidden"
                 >
-                  <p className="pb-5 font-sans text-lg text-mauve">{item.content}</p>
+                  <p className="pb-5 font-sans text-base text-mauve">{item.content}</p>
                 </motion.div>
               )}
             </AnimatePresence>

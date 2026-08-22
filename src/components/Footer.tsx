@@ -55,7 +55,7 @@ export default function Footer() {
             <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 shrink-0" />
             {EMAIL}
           </a>
-          <span className="flex items-center gap-2 text-cream/80">
+          <span className="flex items-center gap-2">
             <FontAwesomeIcon icon={faLocationDot} className="h-4 w-4 shrink-0" />
             Córdoba, Argentina al mundo online.
           </span>

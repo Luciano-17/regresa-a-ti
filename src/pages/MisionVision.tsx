@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
@@ -15,27 +16,12 @@ export default function MisionVision() {
         description="Conocé la misión y la visión detrás de Regresa a Ti: un espacio para acompañarte a volver a vos."
       />
 
-      <div className="h-[75vh] w-full md:h-[85vh]">
-        <img
-          src={heroImage}
-          alt="Misión y visión"
-          width={50}
-          height={50}
-          loading="eager"
-          className="h-full w-full object-cover"
-        />
-      </div>
-
-      <Section background="cream">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple">
-            misión y visión
-          </span>
-          <h1 className="font-serif text-4xl uppercase tracking-wide text-plum md:text-6xl">
-            Un espacio que nació de una convicción
-          </h1>
-        </div>
-      </Section>
+      <PageHero
+        image={heroImage}
+        alt="Misión y visión"
+        eyebrow="misión y visión"
+        title="Un espacio que nació de una convicción"
+      />
 
       <Section background="white">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
@@ -46,7 +32,7 @@ export default function MisionVision() {
             <h2 className="mt-2 font-serif text-2xl text-plum md:text-4xl">
               Acompañarte a volver a vos.
             </h2>
-            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80 md:text-lg">
+            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80">
               <p>
                 Regresa a Ti nació de una convicción simple: muchas veces, entre sostener,
                 resolver y seguir adelante, nos vamos alejando de nosotros mismos sin darnos
@@ -75,7 +61,7 @@ export default function MisionVision() {
             <h2 className="mt-2 font-serif text-2xl text-plum md:text-4xl">
               Aprender a vivir desde tu propio centro.
             </h2>
-            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80 md:text-lg">
+            <div className="mt-5 space-y-4 font-sans text-base leading-relaxed text-plum/80">
               <p>
                 No imagino la evolución personal como llegar a un lugar sin problemas, dudas o
                 desafíos. La vida va a seguir cambiando, y nosotros también.

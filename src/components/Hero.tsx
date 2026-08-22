@@ -39,7 +39,7 @@ const slides: Slide[] = [
     image: slide2Image,
     alt: 'Proceso de autoconocimiento y bienestar emocional',
     title: '¿Qué hay detrás de lo que te pasa?',
-    text: 'Tus emociones, tus pensamientos, tus reacciones y hasta aquello que llamás autosabotaje pueden estar intentando mostrarte algo. Aprender a escucharlo es empezar a conocerte.',
+    text: 'Eso que sentís, pensás y repetís tiene algo para decirte. Incluso aquello que llamás autosabotaje. Escucharlo puede ser el comienzo de conocerte de verdad.',
     buttonLabel: 'Quiero conocerme',
     whatsappMessage: 'Hola! Quiero conocerme.',
   },
@@ -53,7 +53,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 8000)
     return () => clearInterval(timer)
   }, [index])
 
@@ -85,7 +85,7 @@ export default function Hero() {
         <h1 className="max-w-3xl font-serif text-4xl font-bold text-cream md:text-7xl">
           {slide.title}
         </h1>
-        <p className="mt-6 max-w-xl font-sans text-lg text-cream md:text-2xl">{slide.text}</p>
+        <p className="mt-6 max-w-xl font-sans text-base text-cream md:text-xl">{slide.text}</p>
         <Button
           variant="whatsapp"
           size="lg"

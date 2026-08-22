@@ -2,6 +2,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 import Accordion from '../components/Accordion'
 import Seo from '../components/Seo'
+import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
@@ -50,6 +51,11 @@ const herramientas = [
     content:
       'Una práctica espiritual orientada a explorar información y preguntas relacionadas con tu historia y tu camino, como una herramienta de autoconocimiento y reflexión. Desde una mirada espiritual, los Registros Akáshicos se entienden como un espacio de conexión con información del alma que puede ayudarnos a explorar preguntas, decisiones y propósito.',
   },
+  {
+    title: 'Lectura de tarot predictivo',
+    content:
+      'El tarot no busca decidir por vos. Es una herramienta para explorar posibilidades, reconocer tendencias y mirar aquello que quizás todavía no estás viendo. Con esa información, podés elegir con mayor consciencia qué hacer con lo que viene.',
+  },
 ]
 
 const resultados = [
@@ -62,7 +68,7 @@ const resultados = [
     text: 'No se trata solamente de entender tu historia. Aprendés herramientas para atravesar tus desafíos y llevar lo trabajado a tu vida cotidiana.',
   },
   {
-    title: 'Más poder personal',
+    title: 'Reconexión con tu poder personal',
     text: 'Cuando reconocés tus patrones, tus recursos y tus posibilidades, empezás a ocupar un lugar diferente frente a tu propia vida: más consciente, más responsable y más protagonista.',
   },
 ]
@@ -75,28 +81,20 @@ export default function TerapiasIntegrales() {
         description="Sesiones de terapia integral que combinan biodescodificación, coaching de vida, constelaciones familiares y registros akáshicos, según tu propio proceso."
       />
 
-      <div className="h-[75vh] w-full md:h-[85vh]">
-        <img
-          src={heroImage}
-          alt="Terapias integrales"
-          width={50}
-          height={50}
-          loading="eager"
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <PageHero
+        image={heroImage}
+        alt="Terapias integrales"
+        eyebrow="Cada proceso necesita sus propias herramientas."
+        title="Terapias integrales"
+      />
 
       <Section background="cream">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="font-sans text-base font-semibold uppercase tracking-widest text-purple md:text-lg">
-            Cada proceso necesita sus propias herramientas.
-          </span>
-          <h1 className="font-serif text-4xl text-plum md:text-6xl">Terapias integrales</h1>
-          <p className="font-sans text-lg leading-relaxed text-plum/80 md:text-2xl">
+          <p className="font-sans text-base leading-relaxed text-plum/80 md:text-xl">
             Tu historia, tus desafíos y tu manera de vivir son únicos. Por eso, en las
             sesiones de Terapia Integral no trabajamos con una única técnica ni seguimos un
-            método rígido. Integramos distintas herramientas —biodescodificación, coaching de
-            vida, constelaciones familiares y registros akáshicos— de acuerdo con lo que estés
+            método rígido. Integramos distintas herramientas (biodescodificación, coaching de
+            vida, constelaciones familiares y registros akáshicos) de acuerdo con lo que estés
             atravesando, lo que necesites explorar y con aquello que estés dispuesto/a a
             abrir. Cada sesión es individual y tiene el tiempo que necesita. Exploramos,
             comprendemos y buscamos nuevas formas de abordar aquello que hoy querés
@@ -107,7 +105,7 @@ export default function TerapiasIntegrales() {
 
       <Section background="white">
         <h2 className="text-center font-serif text-3xl uppercase tracking-wide text-plum md:text-5xl">
-          Cuatro miradas, un solo proceso
+          Un mismo propósito, distintas herramientas
         </h2>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -117,10 +115,12 @@ export default function TerapiasIntegrales() {
                 {mirada.number} · {mirada.category}
               </span>
               <h3 className="mt-2 font-serif text-2xl text-plum">{mirada.technique}</h3>
-              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{mirada.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70">{mirada.text}</p>
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-center font-serif text-3xl text-plum/70 md:text-5xl">y más…</p>
       </Section>
 
       <Section background="cream">
@@ -138,7 +138,7 @@ export default function TerapiasIntegrales() {
           {resultados.map((resultado) => (
             <div key={resultado.title}>
               <h3 className="font-serif text-2xl text-plum">{resultado.title}</h3>
-              <p className="mt-3 font-sans text-base text-plum/70 md:text-lg">{resultado.text}</p>
+              <p className="mt-3 font-sans text-base text-plum/70">{resultado.text}</p>
             </div>
           ))}
         </div>

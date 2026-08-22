@@ -1,5 +1,6 @@
 import Section from '../components/Section'
 import Accordion from '../components/Accordion'
+import Button from '../components/Button'
 import Seo from '../components/Seo'
 
 const faqs = [
@@ -70,6 +71,17 @@ export default function FAQ() {
           <div className="mt-12">
             <Accordion items={faqs} titleClassName="font-sans text-xl font-bold text-plum" />
           </div>
+        </div>
+      </Section>
+
+      <Section background="white">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
+          <p className="font-serif text-2xl text-plum md:text-4xl">
+            ¿Tenés alguna otra duda antes de empezar?
+          </p>
+          <Button variant="whatsapp" size="xl" whatsappMessage="Hola! Quiero escribirte.">
+            Quiero escribirte
+          </Button>
         </div>
       </Section>
     </>
