@@ -6,7 +6,8 @@ import PageHero from '../components/PageHero'
 // Placeholder: el cliente reemplaza foto-2.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
 // dimensiones reales de la nueva imagen (ayuda a evitar layout shift).
-import fotoGuadalupe from '../assets/images/quien-soy/foto-2.jpg'
+import fotoGuadalupeDesktop from '../assets/images/quien-soy/quiensoy-desktop.png'
+import fotoGuadalupeMobile from '../assets/images/quien-soy/quiensoy-mobile.jpg'
 
 export default function QuienSoy() {
   return (
@@ -17,11 +18,12 @@ export default function QuienSoy() {
       />
 
       <PageHero
-        image={fotoGuadalupe}
+        imageDesktop={fotoGuadalupeDesktop}
+        imageMobile={fotoGuadalupeMobile}
         alt="Guadalupe Zulatto"
         eyebrow="Te cuento de mí"
         title="Hola, soy Guadalupe."
-        imageClassName="object-[50%_25%]"
+        imageClassName="object-[50%_25%] md:object-[50%_0%]"
       />
 
       <Section background="cream">

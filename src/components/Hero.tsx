@@ -24,6 +24,7 @@ type Slide = {
   text: string
   buttonLabel: string
   whatsappMessage: string
+  imageClassName?: string
 }
 
 const slides: Slide[] = [
@@ -34,6 +35,7 @@ const slides: Slide[] = [
     text: 'Porque a veces, para volver a vos, primero necesitás hacer consciente todo aquello que durante tanto tiempo aprendiste a callar.',
     buttonLabel: 'Quiero empezar a escucharme',
     whatsappMessage: 'Hola! Quiero empezar a escucharme.',
+    imageClassName: 'object-[65%_50%] md:object-center',
   },
   {
     image: slide2Image,
@@ -75,7 +77,7 @@ export default function Hero() {
             height={50}
             loading="eager"
             fetchPriority="high"
-            className="h-full w-full object-cover"
+            className={`h-full w-full object-cover ${slide.imageClassName ?? ''}`}
           />
           <div className="absolute inset-0 bg-plum/60" />
         </motion.div>

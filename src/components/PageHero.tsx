@@ -1,22 +1,31 @@
 type PageHeroProps = {
-  image: string
+  imageDesktop: string
+  imageMobile: string
   alt: string
   eyebrow?: string
   title: string
   imageClassName?: string
 }
 
-export default function PageHero({ image, alt, eyebrow, title, imageClassName = '' }: PageHeroProps) {
+export default function PageHero({
+  imageDesktop,
+  imageMobile,
+  alt,
+  eyebrow,
+  title,
+  imageClassName = '',
+}: PageHeroProps) {
   return (
     <div className="relative flex h-[45vh] min-h-[380px] w-full items-center justify-center overflow-hidden md:h-[55vh]">
-      <img
-        src={image}
-        alt={alt}
-        width={50}
-        height={50}
-        loading="eager"
-        className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}
-      />
+      <picture className="absolute inset-0 block h-full w-full">
+        <source media="(min-width: 768px)" srcSet={imageDesktop} />
+        <img
+          src={imageMobile}
+          alt={alt}
+          loading="eager"
+          className={`h-full w-full object-cover ${imageClassName}`}
+        />
+      </picture>
       <div className="absolute inset-0 bg-plum/55" />
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 text-center">

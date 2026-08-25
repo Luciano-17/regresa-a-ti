@@ -1,22 +1,87 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#59254B" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <!--
-      No hay <title>/<meta name="description"> estáticos a propósito: los pone
-      react-helmet-async, distinto en cada página (ver src/components/Seo.tsx,
-      usado en cada src/pages/*.tsx). Agregar acá un <title> o meta description
-      estático haría que queden duplicados en el <head> en vez de ser
-      reemplazados, porque Helmet no sabe que tiene que sacar tags que no
-      renderizó él mismo.
+      Fallback estático de título/description/Open Graph/Twitter, pensado para
+      bots que NO ejecutan JavaScript (el crawler de Meta/Facebook/WhatsApp e
+      Instagram, Twitter/X, LinkedIn) — sin esto, cualquier link a este sitio
+      compartido en Meta Ads o WhatsApp mostraría una vista previa vacía, ya
+      que esos bots nunca llegan a correr React ni a ver lo que arma Helmet.
+
+      El atributo data-static-fallback="true" es un marcador propio (no de
+      react-helmet-async: en React 19 la librería usa el soporte nativo de
+      metadata de React, que no sabe de estos tags ni los reemplaza). Por eso
+      src/main.tsx borra a mano, apenas arranca React, todo lo que tenga este
+      atributo — así Helmet (ver src/components/Seo.tsx) pone lo suyo sin que
+      quede duplicado. Si se agrega un <title>, <meta> o <link> nuevo acá,
+      replicarlo en el fallback de Seo.tsx o dejará de verse en las vistas
+      previas de redes sociales.
+    -->
+    <title data-static-fallback="true">Regresa a Ti | Terapias integrales y movimiento consciente online</title>
+    <meta
+      data-static-fallback="true"
+      name="description"
+      content="Sesiones online individuales de terapia integral y movimiento consciente con Guadalupe Zulatto, para volver a escucharte y conocerte."
+    />
+    <meta data-static-fallback="true" name="robots" content="index, follow" />
+    <link data-static-fallback="true" rel="canonical" href="https://regresaati.com.ar/" />
+
+    <meta data-static-fallback="true" property="og:type" content="website" />
+    <meta data-static-fallback="true" property="og:site_name" content="Regresa a Ti" />
+    <meta data-static-fallback="true" property="og:url" content="https://regresaati.com.ar/" />
+    <meta
+      data-static-fallback="true"
+      property="og:title"
+      content="Regresa a Ti | Terapias integrales y movimiento consciente online"
+    />
+    <meta
+      data-static-fallback="true"
+      property="og:description"
+      content="Sesiones online individuales de terapia integral y movimiento consciente con Guadalupe Zulatto, para volver a escucharte y conocerte."
+    />
+    <meta data-static-fallback="true" property="og:image" content="https://regresaati.com.ar/og-image.jpg" />
+    <meta data-static-fallback="true" property="og:locale" content="es_AR" />
+
+    <meta data-static-fallback="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-static-fallback="true"
+      name="twitter:title"
+      content="Regresa a Ti | Terapias integrales y movimiento consciente online"
+    />
+    <meta
+      data-static-fallback="true"
+      name="twitter:description"
+      content="Sesiones online individuales de terapia integral y movimiento consciente con Guadalupe Zulatto, para volver a escucharte y conocerte."
+    />
+    <meta data-static-fallback="true" name="twitter:image" content="https://regresaati.com.ar/og-image.jpg" />
+
+    <!--
+      Verificación de propiedad — PENDIENTE de los códigos reales.
+
+      Google Search Console: al dar de alta el sitio como propiedad, Search
+      Console ofrece varios métodos de verificación; el más simple acá es
+      "Etiqueta HTML", que da un <meta name="google-site-verification"
+      content="..."> para pegar en este <head>. Descomentar y completar:
+
+      <meta name="google-site-verification" content="PEGAR_CODIGO_AQUI" />
+
+      Meta Business (para verificar el dominio y usarlo en Meta Ads): en
+      Meta Business Manager → Configuración del negocio → Dominios, el método
+      "Verificación por código HTML" da un <meta name="facebook-domain-verification"
+      content="..."> para pegar acá. Descomentar y completar:
+
+      <meta name="facebook-domain-verification" content="PEGAR_CODIGO_AQUI" />
     -->
 
     <!--

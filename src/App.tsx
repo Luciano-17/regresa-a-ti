@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import CookieBanner from './components/CookieBanner'
+import SiteSchema from './components/SiteSchema'
 
 // Code-splitting por ruta: cada página se descarga recién cuando se visita,
 // para mantener liviano el bundle inicial.
@@ -16,6 +17,7 @@ const FAQ = lazy(() => import('./pages/FAQ'))
 const PrivacidadPage = lazy(() => import('./pages/PrivacidadPage'))
 const TerminosPage = lazy(() => import('./pages/TerminosPage'))
 const CancelacionesPage = lazy(() => import('./pages/CancelacionesPage'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function ScrollRestoration() {
   const location = useLocation()
@@ -36,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollRestoration />
+      <SiteSchema />
       <Navbar />
       <Suspense fallback={<div className="min-h-screen bg-cream" />}>
         <Routes>
@@ -48,6 +51,8 @@ function App() {
           <Route path="/privacidad" element={<PrivacidadPage />} />
           <Route path="/terminos" element={<TerminosPage />} />
           <Route path="/cancelaciones" element={<CancelacionesPage />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <WhatsAppFloat />

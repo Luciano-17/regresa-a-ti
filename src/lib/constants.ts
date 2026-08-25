@@ -1,3 +1,5 @@
+export const SITE_URL = 'https://regresaati.com.ar'
+
 export const WHATSAPP_NUMBER = '5493515917235'
 
 export const WHATSAPP_URL = (mensaje?: string): string => {

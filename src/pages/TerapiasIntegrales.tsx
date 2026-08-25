@@ -7,7 +7,8 @@ import PageHero from '../components/PageHero'
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
 // dimensiones reales de la nueva imagen (ayuda a evitar layout shift).
-import heroImage from '../assets/images/terapias/hero.jpg'
+import heroImageDesktop from '../assets/images/terapias/hero-desktop.png'
+import heroImageMobile from '../assets/images/terapias/hero-mobile.jpg'
 
 const miradas = [
   {
@@ -82,7 +83,8 @@ export default function TerapiasIntegrales() {
       />
 
       <PageHero
-        image={heroImage}
+        imageDesktop={heroImageDesktop}
+        imageMobile={heroImageMobile}
         alt="Terapias integrales"
         eyebrow="Cada proceso necesita sus propias herramientas."
         title="Terapias integrales"

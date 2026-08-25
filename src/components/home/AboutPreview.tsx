@@ -4,7 +4,7 @@ import Button from '../Button'
 // Placeholder: el cliente reemplaza foto-1.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
 // dimensiones reales de la nueva imagen (ayuda a evitar layout shift).
-import fotoGuadalupe from '../../assets/images/quien-soy/foto-1.jpg'
+import fotoGuadalupe from '../../assets/images/quien-soy/home.jpg'
 
 export default function AboutPreview() {
   return (

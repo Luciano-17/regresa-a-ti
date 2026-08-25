@@ -6,7 +6,8 @@ import PageHero from '../components/PageHero'
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
 // dimensiones reales de la nueva imagen (ayuda a evitar layout shift).
-import heroImage from '../assets/images/mision-vision/hero.jpg'
+import heroImageDesktop from '../assets/images/mision-vision/hero-desktop.png'
+import heroImageMobile from '../assets/images/mision-vision/hero-mobile.jpg'
 
 export default function MisionVision() {
   return (
@@ -17,10 +18,12 @@ export default function MisionVision() {
       />
 
       <PageHero
-        image={heroImage}
+        imageDesktop={heroImageDesktop}
+        imageMobile={heroImageMobile}
         alt="Misión y visión"
         eyebrow="misión y visión"
         title="Un espacio que nació de una convicción"
+        imageClassName="md:object-[50%_60%]"
       />
 
       <Section background="white">

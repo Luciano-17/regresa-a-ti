@@ -6,7 +6,8 @@ import PageHero from '../components/PageHero'
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
 // Al reemplazarla, actualizar también width/height de abajo con las
 // dimensiones reales de la nueva imagen (ayuda a evitar layout shift).
-import heroImage from '../assets/images/movimiento/hero.jpg'
+import heroImageDesktop from '../assets/images/movimiento/hero-desktop.png'
+import heroImageMobile from '../assets/images/movimiento/hero-mobile.jpg'
 
 const espacio = [
   {
@@ -47,11 +48,12 @@ export default function MovimientoConsciente() {
       />
 
       <PageHero
-        image={heroImage}
+        imageDesktop={heroImageDesktop}
+        imageMobile={heroImageMobile}
         alt="Movimiento consciente"
         eyebrow="Cuando no encontrás las palabras, dejá que el cuerpo hable."
         title="Movimiento consciente"
-        imageClassName="object-top"
+        imageClassName="object-top md:object-[50%_40%]"
       />
 
       <Section background="cream">
