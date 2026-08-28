@@ -7,8 +7,8 @@ import Button from './Button'
 // Placeholders: el cliente reemplaza slide-1.jpg y slide-2.jpg por las fotos definitivas del hero.
 // Al reemplazarlas, actualizar también width/height de la etiqueta <img> de abajo
 // con las dimensiones reales (ayuda a evitar layout shift).
-import slide1Image from '../assets/images/hero/slide-1.jpg'
-import slide2Image from '../assets/images/hero/slide-2.jpg'
+import slide1Image from '../assets/images/hero/slide-1.png'
+import slide2Image from '../assets/images/hero/slide-2.png'
 
 // Si el cliente insiste en reemplazar este slider de fotos por un video de fondo:
 // usar un <video> con autoPlay muted loop playsInline (nunca audio automático),
@@ -35,7 +35,7 @@ const slides: Slide[] = [
     text: 'Porque a veces, para volver a vos, primero necesitás hacer consciente todo aquello que durante tanto tiempo aprendiste a callar.',
     buttonLabel: 'Quiero empezar a escucharme',
     whatsappMessage: 'Hola! Quiero empezar a escucharme.',
-    imageClassName: 'object-[65%_50%] md:object-center',
+    imageClassName: 'object-[40%_50%] md:object-center',
   },
   {
     image: slide2Image,
@@ -60,7 +60,7 @@ export default function Hero() {
   }, [index])
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-plum">
+    <section className="relative h-[85vh] md:h-[80vh] w-full overflow-hidden bg-plum">
       <AnimatePresence>
         <motion.div
           key={slide.image}
@@ -83,7 +83,7 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-16 text-center md:px-24">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-16 text-center md:px-24">
         <h1 className="max-w-3xl font-serif text-4xl font-bold text-cream md:text-7xl">
           {slide.title}
         </h1>
