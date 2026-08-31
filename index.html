@@ -84,36 +84,18 @@
       <meta name="facebook-domain-verification" content="PEGAR_CODIGO_AQUI" />
     -->
 
-    <!--
-      Google tag (gtag.js) — PENDIENTE del ID real del cliente.
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11208585710"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-      Cuando el cliente entregue su ID de Google Ads o GA4 (formato "AW-XXXXXXXXX"
-      para Google Ads, o "G-XXXXXXXXXX" para GA4), descomentar el siguiente bloque
-      y reemplazar GT-XXXXXXX por ese ID en LOS DOS lugares donde aparece (la URL
-      del script y el argumento de gtag('config', ...)). Si el cliente entrega más
-      de un ID (por ejemplo GA4 + Google Ads), se puede llamar a gtag('config', ...)
-      una vez por cada ID, reutilizando el mismo script de gtag.js.
+      gtag('config', 'AW-11208585710')
+    </script>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=GT-XXXXXXX"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'GT-XXXXXXX');
-      </script>
-
-      Evento de conversión en los botones de WhatsApp:
-      Ya está todo preparado en el código para disparar la conversión apenas este
-      script esté activo — no hace falta tocar los componentes. Ver
-      src/lib/gtag.ts: ahí se llama a window.gtag('event', 'conversion', { send_to })
-      en el onClick de los botones de WhatsApp (src/components/Button.tsx variante
-      "whatsapp" y src/components/WhatsAppFloat.tsx), ANTES de que el navegador siga
-      el link (el link abre en pestaña nueva, así que no hace falta prevenir la
-      navegación). Solo falta reemplazar WHATSAPP_CONVERSION_LABEL en
-      src/lib/gtag.ts por la etiqueta real de conversión (Google Ads → Conversiones
-      → tu acción de conversión → "Fragmento de evento", formato
-      "AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX").
-    -->
   </head>
   <body>
     <div id="root"></div>
