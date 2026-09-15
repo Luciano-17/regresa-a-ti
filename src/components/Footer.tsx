@@ -4,6 +4,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { WHATSAPP_URL, INSTAGRAM_URL, EMAIL } from '../lib/constants'
+import { trackWhatsAppConversion } from '../lib/gtag'
 import logo from '../assets/logo/logo-lockup.png'
 import onaiLogo from '../assets/onai-logo.svg'
 
@@ -37,6 +38,7 @@ export default function Footer() {
             href={WHATSAPP_URL()}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppConversion}
             className="flex items-center gap-2 hover:underline"
           >
             <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4 shrink-0" />
