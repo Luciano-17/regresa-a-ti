@@ -67,7 +67,7 @@ export default function Button(props: ButtonProps) {
         rel="noopener noreferrer"
         className={classes}
         onClick={(event) => {
-          trackWhatsAppConversion()
+          trackWhatsAppConversion(event)
           onClick?.(event)
         }}
         {...anchorProps}

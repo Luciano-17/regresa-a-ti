@@ -43,7 +43,12 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Button variant="whatsapp" size="lg" whatsappMessage="Hola! Quiero comenzar a escucharme.">
+        <Button
+          variant="whatsapp"
+          size="lg"
+          whatsappMessage="Hola! Quiero comenzar a escucharme."
+          data-cta="home-testimonios"
+        >
           Quiero comenzar a escucharme
         </Button>
       </div>

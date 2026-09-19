@@ -92,6 +92,7 @@ export default function Hero() {
           variant="whatsapp"
           size="lg"
           whatsappMessage={slide.whatsappMessage}
+          data-cta={`hero-slide-${index + 1}`}
           className="mt-8"
         >
           {slide.buttonLabel}

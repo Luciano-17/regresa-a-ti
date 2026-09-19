@@ -39,6 +39,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppConversion}
+            data-cta="footer"
             className="flex items-center gap-2 hover:underline"
           >
             <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4 shrink-0" />

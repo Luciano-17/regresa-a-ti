@@ -55,6 +55,7 @@ export default function QuienSoy() {
             variant="whatsapp"
             size="xl"
             whatsappMessage="Hola! Vos hablá, yo te escucho."
+            data-cta="quien-soy"
             className="mt-4"
           >
             Vos hablá, yo te escucho

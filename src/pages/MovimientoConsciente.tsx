@@ -104,7 +104,12 @@ export default function MovimientoConsciente() {
           <p className="font-serif text-2xl text-plum md:text-4xl">
             ¿Y si eso que estás intentando entender necesita, primero, ser sentido?
           </p>
-          <Button variant="whatsapp" size="xl" whatsappMessage="Hola! Quiero experimentarlo.">
+          <Button
+            variant="whatsapp"
+            size="xl"
+            whatsappMessage="Hola! Quiero experimentarlo."
+            data-cta="servicios-movimiento"
+          >
             Quiero experimentarlo
           </Button>
         </div>

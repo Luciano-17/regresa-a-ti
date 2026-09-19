@@ -40,7 +40,12 @@ export default function ServicesSection() {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Button variant="whatsapp" size="lg" whatsappMessage="Hola! ¿Qué necesitás hoy? Hablemos.">
+        <Button
+          variant="whatsapp"
+          size="lg"
+          whatsappMessage="Hola! ¿Qué necesitás hoy? Hablemos."
+          data-cta="home-servicios"
+        >
           ¿Qué necesitás hoy? Hablemos.
         </Button>
       </div>
