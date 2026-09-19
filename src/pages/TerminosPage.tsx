@@ -1,14 +1,12 @@
 import LegalLayout from '../components/LegalLayout'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import { EMAIL } from '../lib/constants'
 
 export default function TerminosPage() {
   return (
     <>
-      <Seo
-        title="Términos y Condiciones"
-        description="Términos y condiciones de uso de los servicios de acompañamiento de Regresa a Ti."
-      />
+      <Seo {...SEO_ROUTES['/terminos']} />
       <LegalLayout title="Términos y Condiciones">
       <p>
         Al navegar este sitio o coordinar una sesión con Regresa a Ti, aceptás los siguientes

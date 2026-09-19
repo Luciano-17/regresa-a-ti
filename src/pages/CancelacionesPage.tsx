@@ -1,5 +1,6 @@
 import LegalLayout from '../components/LegalLayout'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import { WHATSAPP_URL } from '../lib/constants'
 import { trackWhatsAppConversion } from '../lib/gtag'
 
@@ -7,10 +8,7 @@ import { trackWhatsAppConversion } from '../lib/gtag'
 export default function CancelacionesPage() {
   return (
     <>
-      <Seo
-        title="Política de Cancelación"
-        description="Conocé las condiciones para cancelar o reprogramar tus sesiones con Regresa a Ti."
-      />
+      <Seo {...SEO_ROUTES['/cancelaciones']} />
       <LegalLayout title="Política de Cancelación">
       <p>
         Para que podamos organizar la agenda y ofrecer una buena disponibilidad a todas las

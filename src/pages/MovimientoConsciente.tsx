@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
@@ -42,10 +43,7 @@ const volverAVos = [
 export default function MovimientoConsciente() {
   return (
     <>
-      <Seo
-        title="Movimiento consciente"
-        description="Un espacio para escuchar y expresar a través del cuerpo lo que las palabras todavía no pueden nombrar."
-      />
+      <Seo {...SEO_ROUTES['/servicios/movimiento-consciente']} />
 
       <PageHero
         imageDesktop={heroImageDesktop}

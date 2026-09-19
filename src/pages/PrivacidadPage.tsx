@@ -1,14 +1,12 @@
 import LegalLayout from '../components/LegalLayout'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import { EMAIL } from '../lib/constants'
 
 export default function PrivacidadPage() {
   return (
     <>
-      <Seo
-        title="Política de Privacidad"
-        description="Conocé cómo Regresa a Ti recolecta, usa y protege tus datos personales."
-      />
+      <Seo {...SEO_ROUTES['/privacidad']} />
       <LegalLayout title="Política de Privacidad">
       <p>
         En Regresa a Ti valoramos tu privacidad y nos comprometemos a proteger los datos

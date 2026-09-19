@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
@@ -12,10 +13,7 @@ import heroImageMobile from '../assets/images/mision-vision/hero-mobile.jpg'
 export default function MisionVision() {
   return (
     <>
-      <Seo
-        title="Misión y visión"
-        description="Conocé la misión y la visión detrás de Regresa a Ti: un espacio para acompañarte a volver a vos."
-      />
+      <Seo {...SEO_ROUTES['/mision-y-vision']} />
 
       <PageHero
         imageDesktop={heroImageDesktop}

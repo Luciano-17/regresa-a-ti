@@ -1,6 +1,7 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza foto-2.jpg por la foto definitiva.
@@ -12,10 +13,7 @@ import fotoGuadalupeMobile from '../assets/images/quien-soy/quiensoy-mobile.jpg'
 export default function QuienSoy() {
   return (
     <>
-      <Seo
-        title="Quién soy"
-        description="Conocé a Guadalupe Zulatto, terapeuta holística e instructora de movimiento detrás de Regresa a Ti."
-      />
+      <Seo {...SEO_ROUTES['/quien-soy']} />
 
       <PageHero
         imageDesktop={fotoGuadalupeDesktop}

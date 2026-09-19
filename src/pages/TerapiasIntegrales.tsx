@@ -2,6 +2,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 import Accordion from '../components/Accordion'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 import PageHero from '../components/PageHero'
 
 // Placeholder: el cliente reemplaza hero.jpg por la foto definitiva.
@@ -77,10 +78,7 @@ const resultados = [
 export default function TerapiasIntegrales() {
   return (
     <>
-      <Seo
-        title="Terapias integrales"
-        description="Sesiones de terapia integral que combinan biodescodificación, coaching de vida, constelaciones familiares y registros akáshicos, según tu propio proceso."
-      />
+      <Seo {...SEO_ROUTES['/servicios/terapias-integrales']} />
 
       <PageHero
         imageDesktop={heroImageDesktop}

@@ -2,6 +2,7 @@ import Section from '../components/Section'
 import Accordion from '../components/Accordion'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import { SEO_ROUTES } from '../lib/seo-routes'
 
 const faqs = [
   {
@@ -59,10 +60,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <>
-      <Seo
-        title="Preguntas frecuentes"
-        description="Resolvé tus dudas sobre cómo funcionan las sesiones, los pagos y el proceso de acompañamiento en Regresa a Ti."
-      />
+      <Seo {...SEO_ROUTES['/faq']} />
       <Section background="cream">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-center font-serif text-4xl text-plum md:text-6xl">
