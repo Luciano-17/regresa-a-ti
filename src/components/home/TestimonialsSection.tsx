@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
           variant="whatsapp"
           size="lg"
           whatsappMessage="Hola! Quiero comenzar a escucharme."
-          data-cta="home-testimonios"
+          data-cta="home-beneficios"
         >
           Quiero comenzar a escucharme
         </Button>

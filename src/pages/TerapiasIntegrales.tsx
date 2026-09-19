@@ -154,7 +154,7 @@ export default function TerapiasIntegrales() {
             variant="whatsapp"
             size="xl"
             whatsappMessage="Hola! Quiero empezar mi proceso."
-            data-cta="servicios-terapias"
+            data-cta="terapias-cta"
           >
             Quiero empezar mi proceso
           </Button>

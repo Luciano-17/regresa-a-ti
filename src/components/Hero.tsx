@@ -24,6 +24,7 @@ type Slide = {
   text: string
   buttonLabel: string
   whatsappMessage: string
+  ctaId: string
   imageClassName?: string
 }
 
@@ -35,6 +36,7 @@ const slides: Slide[] = [
     text: 'Porque a veces, para volver a vos, primero necesitás hacer consciente todo aquello que durante tanto tiempo aprendiste a callar.',
     buttonLabel: 'Quiero empezar a escucharme',
     whatsappMessage: 'Hola! Quiero empezar a escucharme.',
+    ctaId: 'home-hero',
     imageClassName: 'object-[40%_50%] md:object-center',
   },
   {
@@ -44,6 +46,7 @@ const slides: Slide[] = [
     text: 'Eso que sentís, pensás y repetís tiene algo para decirte. Incluso aquello que llamás autosabotaje. Escucharlo puede ser el comienzo de conocerte de verdad.',
     buttonLabel: 'Quiero conocerme',
     whatsappMessage: 'Hola! Quiero conocerme.',
+    ctaId: 'home-dolor',
   },
 ]
 
@@ -92,7 +95,7 @@ export default function Hero() {
           variant="whatsapp"
           size="lg"
           whatsappMessage={slide.whatsappMessage}
-          data-cta={`hero-slide-${index + 1}`}
+          data-cta={slide.ctaId}
           className="mt-8"
         >
           {slide.buttonLabel}

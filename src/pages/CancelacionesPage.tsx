@@ -50,7 +50,7 @@ export default function CancelacionesPage() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppConversion}
-            data-cta="cancelaciones"
+            data-cta="cancelaciones-cta"
             className="text-purple underline"
           >
             WhatsApp

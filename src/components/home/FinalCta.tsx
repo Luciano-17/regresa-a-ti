@@ -16,7 +16,7 @@ export default function FinalCta() {
           variant="whatsapp"
           size="lg"
           whatsappMessage="Hola! Hablemos."
-          data-cta="home-final"
+          data-cta="home-cierre"
           className="uppercase tracking-wide"
         >
           Hablemos

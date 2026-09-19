@@ -77,7 +77,7 @@ export default function FAQ() {
           <p className="font-serif text-2xl text-plum md:text-4xl">
             ¿Tenés alguna otra duda antes de empezar?
           </p>
-          <Button variant="whatsapp" size="xl" whatsappMessage="Hola! Quiero escribirte." data-cta="faq">
+          <Button variant="whatsapp" size="xl" whatsappMessage="Hola! Quiero escribirte." data-cta="faq-cta">
             Quiero escribirte
           </Button>
         </div>

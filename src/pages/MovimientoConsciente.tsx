@@ -106,7 +106,7 @@ export default function MovimientoConsciente() {
             variant="whatsapp"
             size="xl"
             whatsappMessage="Hola! Quiero experimentarlo."
-            data-cta="servicios-movimiento"
+            data-cta="movimiento-cta"
           >
             Quiero experimentarlo
           </Button>

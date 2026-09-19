@@ -92,7 +92,7 @@ export default function MisionVision() {
             variant="whatsapp"
             size="xl"
             whatsappMessage="Hola! Quiero darme este espacio."
-            data-cta="mision-vision"
+            data-cta="mision-cta"
             className="uppercase tracking-wide"
           >
             Quiero darme este espacio
