@@ -1,15 +1,12 @@
 import Section from '../components/Section'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
+import { NOT_FOUND_SEO } from '../lib/seo-routes'
 
 export default function NotFound() {
   return (
     <>
-      <Seo
-        title="Página no encontrada"
-        description="La página que buscás no existe o fue movida. Volvé al inicio o escribinos si necesitás ayuda."
-        noindex
-      />
+      <Seo {...NOT_FOUND_SEO} noindex />
 
       <Section background="cream">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">

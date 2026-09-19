@@ -1,7 +1,27 @@
+ErrorDocument 404 /404.html
+
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} -f [OR]
+
+# 1. /index.html y /algo.html -> URL limpia (301). THE_REQUEST es lo que pidió el
+#    cliente, así los rewrites internos hacia .html no entran en loop.
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/[^\s?]+\.html[\s?]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# 2. Barra final -> sin barra (301). La raíz "/" no matchea (.+).
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# 3. Carpetas reales (assets/, _prerender/) no se exponen: 404, sin 403 ni listado.
 RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.+$ - [R=404,L]
+
+# 4. Archivos reales (assets, favicon, robots.txt, sitemap.xml, 404.html): se sirven tal cual.
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [L]
-RewriteRule ^ index.html [L]
+
+# 5. Rutas de la SPA prerenderizadas: /quien-soy -> /_prerender/quien-soy.html
+RewriteCond %{DOCUMENT_ROOT}/_prerender/$1.html -f
+RewriteRule ^(.+)$ /_prerender/$1.html [L]
+
+# Todo lo demás (/foo, /servicios) no matchea nada: Apache responde 404 real con /404.html.

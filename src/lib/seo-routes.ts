@@ -49,3 +49,10 @@ export const SEO_ROUTES = {
 } as const
 
 export type SeoRoute = keyof typeof SEO_ROUTES
+
+// Se sirve como 404.html (documento de error de Apache): sin canonical y noindex.
+export const NOT_FOUND_SEO = {
+  title: 'Página no encontrada',
+  description:
+    'La página que buscás no existe o fue movida. Volvé al inicio o escribinos si necesitás ayuda.',
+} as const

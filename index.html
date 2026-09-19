@@ -31,16 +31,15 @@
       bots que NO ejecutan JavaScript (el crawler de Meta/Facebook/WhatsApp e
       Instagram, Twitter/X, LinkedIn) — sin esto, cualquier link a este sitio
       compartido en Meta Ads o WhatsApp mostraría una vista previa vacía, ya
-      que esos bots nunca llegan a correr React ni a ver lo que arma Helmet.
+      que esos bots nunca llegan a correr React ni a ver lo que arma <Seo>.
 
-      El atributo data-static-fallback="true" es un marcador propio (no de
-      react-helmet-async: en React 19 la librería usa el soporte nativo de
-      metadata de React, que no sabe de estos tags ni los reemplaza). Por eso
-      src/main.tsx borra a mano, apenas arranca React, todo lo que tenga este
-      atributo — así Helmet (ver src/components/Seo.tsx) pone lo suyo sin que
-      quede duplicado. Si se agrega un <title>, <meta> o <link> nuevo acá,
-      replicarlo en el fallback de Seo.tsx o dejará de verse en las vistas
-      previas de redes sociales.
+      El atributo data-static-fallback="true" es un marcador propio: el plugin
+      prerenderSeo de vite.config.ts lo usa para ubicar y reescribir estos tags
+      en el HTML de cada ruta (y en 404.html) durante el build. En el cliente,
+      src/components/Seo.tsx sobrescribe estos mismos elementos en el lugar (no
+      los quita), así el <title> nunca queda vacío. Si se agrega un <title>,
+      <meta> o <link> nuevo acá, replicarlo en Seo.tsx y, si varía por ruta,
+      en prerenderSeo.
     -->
     <title data-static-fallback="true">Regresa a Ti | Terapias integrales y movimiento consciente online</title>
     <meta
